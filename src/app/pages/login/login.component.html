@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button class="titulo" routerLink="/singup">
+        Sing Up
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1 class="entrada">Login</h1>
+    <img src="assets/logo.png">
+  </div>
+
+  <div id="form">
+    <ion-icon name="mail-outline"></ion-icon>
+    <app-input [(ngModel)]="credenciales.correo" ngDefaultControl label="Correo"></app-input>
+
+    <ion-icon name="lock-closed-outline"></ion-icon>
+    <app-input [(ngModel)]="credenciales.password" ngDefaultControl type="password" label="Password"></app-input>
+  </div>
+
+  <form id="form">
+    <ion-button (click)="login()" expand="block" shape="round" class="buttom">Ingresar</ion-button>
+  </form>
+
+</ion-content>
+
+
+
+

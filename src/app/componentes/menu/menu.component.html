@@ -1,0 +1,27 @@
+<ion-item detail= "true" [routerLink]="['/categorias']"  (click)="irCategorias() ">
+  <ion-label>
+    <H6>Categorias</H6>
+    </ion-label>
+    <ion-icon name="document-text-outline" slot="start"></ion-icon>
+</ion-item>
+
+<ion-item *ngIf="login && rol == 'Visitante' " detail= "true" [routerLink]="['/Pedidos']" (click)="irPedidos()" >
+  <ion-label>
+    <H6>Mis Pedidos</H6>
+  </ion-label>
+  <ion-icon name="fast-food-outline" slot="start"></ion-icon>
+</ion-item>
+
+<ion-item *ngIf="login && rol == 'Admin' " detail= "true" [routerLink]="['/Productos']" (click)="irProductos()" >
+  <ion-label>
+    <H6>Productos</H6>
+  </ion-label>
+  <ion-icon name="bag-add-outline" slot="start"></ion-icon>
+</ion-item>
+
+<ion-item *ngIf="login" detail= "true" (click)="logout()">
+  <ion-label>
+    <H6>Logout</H6>
+  </ion-label>
+  <ion-icon name="log-out-outline" slot="start"></ion-icon>
+</ion-item>

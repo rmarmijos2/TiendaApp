@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titulo">
+      VERDURAS
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/categorias']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div class="margenes">  
+  <div class="ion-text-center">
+    <h1 class="titulo">Verduras</h1>
+  </div>
+  <p class="texto">Verduras frescas</p>
+
+    <ion-card-content *ngFor="let item of arrayVerduras">
+      
+      <ion-card class="cat">
+        <img class="imagenes" src="{{item.imagen}}">
+        <ion-card-header>
+            <h4 class="textt">{{item.nombre}}</h4>
+            <p class="textt2">{{item.precio}}</p>
+            <div class="ion-text-center">
+            <ion-button>AÑADIR A LA COMPRA</ion-button>
+            </div>
+        </ion-card-header>
+      </ion-card>
+
+    </ion-card-content>
+</div>
+
+</ion-content>

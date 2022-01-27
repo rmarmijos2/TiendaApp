@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titulo">
+      Categorias
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div (click)="irBebidas()">
+    <ion-card class="cat">
+      <img class="imagenes" src="https://cdn-icons-png.flaticon.com/512/917/917940.png">
+      <ion-card-header>
+        <ion-card-subtitle class="textt">
+          <h2><b>BEBIDAS</b></h2>
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div> 
+
+  <div (click)="irSnaks()">
+    <ion-card class="cat">
+      <img class="imagenes" src="https://cdn-icons-png.flaticon.com/512/859/859293.png">
+      <ion-card-header>
+        <ion-card-subtitle class="textt">
+          <h2><b>SNAKS</b></h2>
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <div (click)="irVerduras()">
+    <ion-card class="cat">
+      <img class="imagenes" src="https://cdn-icons-png.flaticon.com/512/3082/3082061.png">
+      <ion-card-header>
+        <ion-card-subtitle class="textt">
+          <h2><b>VERDURAS</b></h2>
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <div (click)="irLimpieza()">
+    <ion-card class="cat">
+      <img class="imagenes" src="https://cdn-icons-png.flaticon.com/512/994/994928.png">
+      <ion-card-header>
+        <ion-card-subtitle class="textt">
+          <h2><b>LIMPIEZA</b></h2>
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>

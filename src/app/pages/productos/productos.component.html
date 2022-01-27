@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titulo">
+      Productos
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <div class="subtitulo" (click)="irAddProducto()">
+  <ion-icon name="bag-add-outline"></ion-icon> Añadir Producto
+ </div>
+</ion-content>

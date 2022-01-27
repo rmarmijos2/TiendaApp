@@ -1,0 +1,98 @@
+<ion-header class="ion-no-border"> 
+
+  <ion-toolbar class="ion-text-center">
+    
+    <ion-title class="titulo">
+      RAPIBONO
+    </ion-title>
+
+    <ion-buttons slot="start">
+
+      <ion-button (click)="openMenu($event)">
+        <ion-avatar>
+          <img src="https://media1.giphy.com/media/HmyUn745HnHOuRFiEd/giphy.gif?cid=790b7611311b2d456e4df42fcc02e7ee728a6336ff8bebe2&rid=giphy.gif&ct=s">
+        </ion-avatar> 
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons *ngIf="login == false" slot="end">
+        <ion-button [routerLink]="['/login']">
+          <ion-icon color="dark" slot= "icon-only" name="person-circle" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons *ngIf="login" slot="end">
+      <ion-button [routerLink]="['/perfil']">
+        <ion-avatar>
+          <img src="http://pa1.narvii.com/6692/29da722dac9fca9997abc4b52592b5b2f080b853_00.gif">
+        </ion-avatar>
+        <!-- <ion-icon color="dark" slot= "icon-only" name="body-outline" ></ion-icon> -->
+    </ion-button>
+  </ion-buttons>
+
+  </ion-toolbar> 
+</ion-header>
+
+<ion-content>
+
+  <div class="search ion-padding">
+    <ion-item lines="none">
+      <ion-input placeholder="Busca Tu Producto"></ion-input>
+      <ion-icon name="search-outline" slot="start"></ion-icon>
+    </ion-item>
+  </div>
+
+  <div class="margenes">
+    <ion-item lines="none">
+        <img src="assets/logo.png" slot="start" class="imgAvatar">
+      <ion-label>
+        <p class="tituloAvatar">Bienvenido a RAPIBONO</p>
+        <h3  *ngIf="info" class="subtituloAvatar">{{info.nombre}}</h3>
+      </ion-label>
+    </ion-item>
+    <div class="ion-text-center">     
+      <h2 class="texto">Busca tus productos favoritos y reservalos</h2>
+    </div>
+  </div>
+  
+  <div class="titulo ion-padding">
+    <h2 class="h2sub">Categorias</h2>
+  </div>
+
+  <div class="categorias-slides ion-padding-start">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grandCursor: true}">
+      <ion-slide>
+        <ion-col (click)="irBebidas()">
+          <h4 class="titulo">Bebidas</h4>
+          <img src="https://cdn-icons-png.flaticon.com/512/917/917940.png">
+        </ion-col>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-col (click)="irSnaks()">
+          <h4 class="titulo">Snaks</h4>
+          <img src="https://cdn-icons-png.flaticon.com/512/859/859293.png">
+        </ion-col>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-col (click)="irVerduras()">
+          <h4 class="titulo">Verduras</h4>
+          <img src="https://cdn-icons-png.flaticon.com/512/3082/3082061.png">
+        </ion-col>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-col (click)="irLimpieza()">
+          <h4 class="titulo">Limpieza</h4>
+          <img src="https://cdn-icons-png.flaticon.com/512/994/994928.png">
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="titulo ion-padding">
+    <h2 class="h2sub">Mas Vendido</h2>
+  </div>
+  
+</ion-content>

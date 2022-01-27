@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/login" class="titulo">
+        Login
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header" >
+    <h1 class="entrada" >Crear Cuenta </h1>
+  </div>
+
+  <div id="form">
+    <app-input [(ngModel)]="datos.nombre" ngDefaultControl label="Nombre"></app-input>
+    <app-input [(ngModel)]="datos.apellido" ngDefaultControl label="Apellido"></app-input>
+    <app-input [(ngModel)]="datos.genero" ngDefaultControl label="Género"></app-input>
+    <app-input [(ngModel)]="datos.numero" ngDefaultControl label="Teléfono Celular"></app-input>
+    <app-input [(ngModel)]="datos.email" ngDefaultControl label="Email"></app-input>
+    <app-input [(ngModel)]="datos.password" ngDefaultControl type="password" label="Password"></app-input>
+
+    <ion-button expand="block" shape="round" class="buttom" (click)="registrar()">Registrarse</ion-button>
+  </div>
+
+  <p>Por favor presione 'Registrarse' para aceptar<br />los terminos & condiciones</p>
+
+</ion-content>
